@@ -1,0 +1,27 @@
+Results for the extraLargeArray
+insert 732.4683 ms
+append 2.4975 ms
+
+Results for the largeArray
+insert 7.6325 ms
+append 406 μs
+
+Results for the mediumArray
+insert 136.8 μs
+append 116.3 μs
+
+Results for the smallArray
+insert 42.8 μs
+append 92.8 μs
+
+Results for the tinyArray
+insert 31.5 μs
+append 72.7 μs
+
+The function append uses push O(1) and time complexity increases at much smaller rate as the array size increases. The function insert uses unshift O(n) and the time complexity increases at a much greater rate than append. The insert function does not scale as well as the append when array size increases. The append function will scale better as the arrray gets larger.
+
+The append function by using push just assigns a new value to the end of the array.
+The insert function by using unshift adds one element to the beginning of the array causing all the other values in the array to be reindexed.
+This is what makes the insert function run longer as the array size increases.
+
+
